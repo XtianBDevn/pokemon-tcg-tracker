@@ -68,5 +68,36 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [
+    function({ addBase, addUtilities }) {
+      addBase({
+        'html': {
+          scrollBehavior: 'smooth',
+        },
+        'body': {
+          backgroundColor: '#0f172a',
+          color: '#f8fafc',
+          overflowX: 'hidden',
+          WebkitFontSmoothing: 'antialiased',
+          MozOsxFontSmoothing: 'grayscale',
+        },
+      })
+      addUtilities({
+        '.text-gradient': {
+          backgroundImage: 'linear-gradient(to right, #ef4444, #f59e0b, #3b82f6)',
+          WebkitBackgroundClip: 'text',
+          backgroundClip: 'text',
+          color: 'transparent',
+        },
+        '.pokeball-shadow': {
+          boxShadow: '0 10px 40px rgba(239, 68, 68, 0.3)',
+        },
+        '.glass-effect': {
+          backgroundColor: 'rgba(15, 23, 42, 0.5)',
+          backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(30, 41, 59, 0.5)',
+        },
+      })
+    }
+  ]
 } satisfies Config

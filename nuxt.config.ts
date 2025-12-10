@@ -22,7 +22,6 @@ export default defineNuxtConfig({
     }
   },
 
-  css: ['~/assets/css/main.css'],
 
   app: {
     head: {
@@ -53,13 +52,6 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: ['three', 'gsap']
-    }
-  },
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {}
     }
   }
 })
