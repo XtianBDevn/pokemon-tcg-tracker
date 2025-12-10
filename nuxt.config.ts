@@ -54,5 +54,12 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: ['three', 'gsap']
     }
+  },
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
   }
 })
