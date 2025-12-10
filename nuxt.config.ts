@@ -4,13 +4,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxtjs/tailwindcss',
     '@hypernym/nuxt-gsap',
     '@tresjs/nuxt',
     '@vueuse/nuxt',
     '@nuxt/image',
     '@nuxt/icon'
   ],
+
+  css: ['~/assets/css/main.css'],
 
   gsap: {
     extraPlugins: {
