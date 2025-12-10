@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-50 overflow-x-hidden antialiased;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-pokered-500 via-pokeyellow-500 to-pokeblue-500 bg-clip-text text-transparent;
+  }
+
+  .pokeball-shadow {
+    box-shadow: 0 10px 40px rgba(239, 68, 68, 0.3);
+  }
+
+  .glass-effect {
+    @apply bg-slate-900/50 backdrop-blur-md border border-slate-800/50;
+  }
+}
